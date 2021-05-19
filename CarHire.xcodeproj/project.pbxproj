@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58913FD82655A23C00AB4D23 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58913FD72655A23C00AB4D23 /* NetworkService.swift */; };
+		58913FDA2655A35600AB4D23 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58913FD92655A35600AB4D23 /* ApiResponse.swift */; };
+		58913FDD2655A5D600AB4D23 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58913FDC2655A5D600AB4D23 /* Constants.swift */; };
 		58A8D42E26529DB000F6C58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A8D42D26529DB000F6C58D /* AppDelegate.swift */; };
 		58A8D43026529DB000F6C58D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A8D42F26529DB000F6C58D /* SceneDelegate.swift */; };
 		58A8D43226529DB000F6C58D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A8D43126529DB000F6C58D /* ViewController.swift */; };
@@ -43,6 +46,9 @@
 		188BF6909B311DF77C949626 /* Pods_CarHire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarHire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D1494D71E8F5A9F3EE25C49 /* Pods-CarHire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarHire.debug.xcconfig"; path = "Target Support Files/Pods-CarHire/Pods-CarHire.debug.xcconfig"; sourceTree = "<group>"; };
 		573699CE684703ED48A82131 /* Pods_CarHireTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarHireTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58913FD72655A23C00AB4D23 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		58913FD92655A35600AB4D23 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		58913FDC2655A5D600AB4D23 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		58A8D42A26529DAF00F6C58D /* CarHire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarHire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A8D42D26529DB000F6C58D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58A8D42F26529DB000F6C58D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +107,74 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		58913FD02655A0EC00AB4D23 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				58A8D42D26529DB000F6C58D /* AppDelegate.swift */,
+				58A8D42F26529DB000F6C58D /* SceneDelegate.swift */,
+				58A8D43626529DB100F6C58D /* Assets.xcassets */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		58913FD12655A10B00AB4D23 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				58A8D43826529DB100F6C58D /* LaunchScreen.storyboard */,
+				58A8D43326529DB000F6C58D /* Main.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		58913FD22655A12B00AB4D23 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				58913FD52655A19800AB4D23 /* viewModel */,
+				58913FD42655A18900AB4D23 /* model */,
+				58913FD32655A18000AB4D23 /* view */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		58913FD32655A18000AB4D23 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				58A8D43126529DB000F6C58D /* ViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		58913FD42655A18900AB4D23 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		58913FD52655A19800AB4D23 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		58913FD62655A22200AB4D23 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				58913FD72655A23C00AB4D23 /* NetworkService.swift */,
+				58913FD92655A35600AB4D23 /* ApiResponse.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		58913FDB2655A5C800AB4D23 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				58913FDC2655A5D600AB4D23 /* Constants.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		58A8D42126529DAF00F6C58D = {
 			isa = PBXGroup;
 			children = (
@@ -126,12 +200,11 @@
 		58A8D42C26529DAF00F6C58D /* CarHire */ = {
 			isa = PBXGroup;
 			children = (
-				58A8D42D26529DB000F6C58D /* AppDelegate.swift */,
-				58A8D42F26529DB000F6C58D /* SceneDelegate.swift */,
-				58A8D43126529DB000F6C58D /* ViewController.swift */,
-				58A8D43326529DB000F6C58D /* Main.storyboard */,
-				58A8D43626529DB100F6C58D /* Assets.xcassets */,
-				58A8D43826529DB100F6C58D /* LaunchScreen.storyboard */,
+				58913FDB2655A5C800AB4D23 /* utils */,
+				58913FD62655A22200AB4D23 /* network */,
+				58913FD22655A12B00AB4D23 /* home */,
+				58913FD12655A10B00AB4D23 /* view */,
+				58913FD02655A0EC00AB4D23 /* app */,
 				58A8D43B26529DB100F6C58D /* Info.plist */,
 			);
 			path = CarHire;
@@ -165,7 +238,6 @@
 				73E035430CF198AEBD8FABCE /* Pods-CarHireTests.debug.xcconfig */,
 				BC75C0D6E0DC3EEA254BC277 /* Pods-CarHireTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -409,7 +481,10 @@
 			files = (
 				58A8D43226529DB000F6C58D /* ViewController.swift in Sources */,
 				58A8D42E26529DB000F6C58D /* AppDelegate.swift in Sources */,
+				58913FD82655A23C00AB4D23 /* NetworkService.swift in Sources */,
+				58913FDA2655A35600AB4D23 /* ApiResponse.swift in Sources */,
 				58A8D43026529DB000F6C58D /* SceneDelegate.swift in Sources */,
+				58913FDD2655A5D600AB4D23 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
