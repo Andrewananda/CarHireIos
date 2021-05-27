@@ -12,3 +12,10 @@ public enum Errors : Error {
     case custom(Int, String)
     case apiError(String)
 }
+
+struct ApiResponse<T: Codable> : Codable {
+    let info: String
+    let message: String
+    let count: Int
+    let data: T
+}
