@@ -20,11 +20,19 @@ class ViewController: UIViewController {
     }
 
     private func observeForLiveData() {
-        viewModel.homeLiveData.subscribe({[weak self] response in
-            debugPrint("Response \(response)")
+        viewModel.homeLiveData.subscribe(onNext: {[weak self] response in
+            print("Response \(response)")
+            self?.displayTopData(car: response.featured_car)
         }).disposed(by: bag)
         viewModel.fetchHomeData()
     }
 
+    private func displayTopData(car: [FeaturedCar]?) {
+        if let cars = car {
+            for item in cars {
+                print("Car \(item)")
+            }
+        }
+    }
 }
 

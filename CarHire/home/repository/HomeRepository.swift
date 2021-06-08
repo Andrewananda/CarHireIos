@@ -20,7 +20,6 @@ class HomeRepository {
             switch response {
             case .success(let data) :
                 self?.homeSubject.accept(data.data)
-                print("Data \(data.data)")
             case .failure(let error) :
                 print("Error \(error)")
             }

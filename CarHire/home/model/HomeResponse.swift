@@ -8,8 +8,8 @@
 import Foundation
 
 struct HomeResponse : Codable {
-    let featured_car: [FeaturedCar]?
-    let top_deals: [FeaturedCar]?
+    var featured_car: [FeaturedCar]?
+    var top_deals: [FeaturedCar]?
 }
 
 struct FeaturedCar : Codable {
