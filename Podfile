@@ -9,6 +9,7 @@ target 'CarHire' do
     pod 'RxSwift', '~> 6.2.0'
     pod 'RxCocoa', '6.2.0'
     pod 'Alamofire', '~> 5.2'
+    pod 'SDWebImage', '~> 5.0'
 
   target 'CarHireTests' do
     inherit! :search_paths

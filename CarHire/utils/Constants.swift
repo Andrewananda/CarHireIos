@@ -13,4 +13,7 @@ struct K {
       static let home = "home"
       static let imageUrl = "http://carhire.devstart.co.ke/portal/storage/app/public/images/"
     }
+    struct viewConstants{
+        static let reusableFeaturedCarCell = "featuredCarCell"
+    }
 }

@@ -20,7 +20,7 @@ struct FeaturedCar : Codable {
     let hire_duration_id: Int
     let number_of_seats : String
     let number_plate: String
-    let photo: String?
+    let photo: String
     let price : Int
     let status: String
     let remember_token : String?
