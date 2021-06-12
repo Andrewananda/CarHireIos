@@ -12,10 +12,12 @@ import RxRelay
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
 
     @IBOutlet weak var collectionView: UICollectionViewCell!
+    @IBOutlet weak var topDealsCollectionView: UICollectionView!
     private let viewModel = HomeViewModel()
     private let bag = DisposeBag()
     
     private var featuredCar = BehaviorRelay<FeaturedCar?>(value: nil)
+    private var topDealData = BehaviorRelay<FeaturedCar?>(value: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         viewModel.homeLiveData.subscribe(onNext: {[weak self] response in
             print("Response \(response)")
             self?.displayTopData(car: response.featured_car)
+            self?.displayTopDeals(topDeals: response.top_deals)
         }).disposed(by: bag)
         viewModel.fetchHomeData()
     }
@@ -37,6 +40,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if let cars = car {
             for item in cars {
                 featuredCar.accept(item)
+            }
+        }
+    }
+    
+    private func displayTopDeals(topDeals: [FeaturedCar]?) {
+        if let topDeals = topDeals{
+            for topDeal in topDeals {
+                topDealData.accept(topDeal)
             }
         }
     }
