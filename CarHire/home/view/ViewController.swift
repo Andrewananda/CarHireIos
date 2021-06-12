@@ -18,7 +18,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     private var featuredCar = BehaviorRelay<FeaturedCar?>(value: nil)
     private var topDealData = BehaviorRelay<FeaturedCar?>(value: nil)
-    private var data = [FeaturedCar]()
+    private var topData = [FeaturedCar]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +63,7 @@ extension ViewController {
         else {
             topDealData.subscribe(onNext: {[weak self] response in
                 if let data = response{
-                    self?.data.append(data)
+                    self?.topData.append(data)
                 }
             }).disposed(by: bag)
             return 10
