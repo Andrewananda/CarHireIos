@@ -40,7 +40,7 @@ struct HireDuration: Codable {
 
 struct Model: Codable {
     let id: Int
-    let title: String
+    let title: String?
     let description: String?
     let remember_token: String?
     let created_at: String?
