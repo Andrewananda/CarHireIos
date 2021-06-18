@@ -29,8 +29,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     private func observeForLiveData() {
         viewModel.homeLiveData.subscribe(onNext: {[weak self] response in
-            self?.displayTopData(car: response.featured_car)
             self?.displayTopDeals(topDeals: response.top_deals)
+            self?.displayTopData(car: response.featured_car)
         }).disposed(by: bag)
         viewModel.fetchHomeData()
     }
@@ -47,7 +47,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         //print("TopDeals \(topDeals)")
         if let topDeals = topDeals{
             for topDeal in topDeals {
-                self.topData.append(topDeal)
                 topDealData.accept(topDeal)
             }
         }
@@ -57,20 +56,39 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
 extension ViewController {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        if collectionView == topDealsCollectionView {
+            return 100
+        }else {
+            return 1
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.viewConstants.reusableFeaturedCarCell, for: indexPath) as! FeaturedCarViewCell
-        featuredCar.subscribe(onNext: {response in
-            cell.carName.text = response?.model?.title
-            cell.plateNumber.text = response?.number_plate
-            guard let imageUrl = response?.photo else {
-                return
-            }
-            cell.loadImage(url: imageUrl)
-        }).disposed(by: bag)
+        if collectionView == topDealsCollectionView {
+            let cell = topDealsCollectionView.dequeueReusableCell(withReuseIdentifier: K.viewConstants.topDealsCell, for: indexPath) as! TopViewDataCell
+            topDealData.subscribe(onNext: {response in
+                cell.title.text = response?.model?.title
+                cell.duration.text = response?.hire_duration?.name
+                
+                guard let imageUrl = response?.photo else {
+                    return
+                }
+                cell.loadImage(url: imageUrl)
+            }).disposed(by: bag)
+            
+            return cell
+        }else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.viewConstants.reusableFeaturedCarCell, for: indexPath) as! FeaturedCarViewCell
+            featuredCar.subscribe(onNext: {response in
+                cell.carName.text = response?.model?.title
+                cell.plateNumber.text = response?.number_plate
+                guard let imageUrl = response?.photo else {
+                    return
+                }
+                cell.loadImage(url: imageUrl)
+            }).disposed(by: bag)
 
-        return cell
+            return cell
+        }
     }
 }

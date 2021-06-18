@@ -66,7 +66,7 @@
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZd-q4-658">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="400" height="96"/>
                                                                                     <subviews>
-                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wIT-wL-ie3">
+                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wIT-wL-ie3">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                         </imageView>
@@ -172,27 +172,27 @@
                                                 <rect key="frame" x="0.0" y="320" width="414" height="500"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="w2z-FU-TZk">
-                                                        <rect key="frame" x="0.0" y="10" width="180" height="200"/>
+                                                        <rect key="frame" x="0.0" y="10" width="414" height="725"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TLV-14-gZc">
-                                                            <size key="itemSize" width="180" height="200"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="7" minimumInteritemSpacing="0.0" id="TLV-14-gZc">
+                                                            <size key="itemSize" width="166" height="198"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                            <inset key="sectionInset" minX="7" minY="0.0" maxX="7" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="topDealsRusableCell" id="1eJ-gX-K38" customClass="TopViewCell" customModule="CarHire" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="topDealsRusableCell" id="1eJ-gX-K38" customClass="TopViewDataCell" customModule="CarHire" customModuleProvider="target">
+                                                                <rect key="frame" x="7" y="0.0" width="166" height="198"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Epm-fV-znq">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="166" height="198"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XtY-LD-HO9">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="100"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="166" height="100"/>
                                                                             <subviews>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gmf-uB-PPE">
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gmf-uB-PPE">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="100"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                 </imageView>
@@ -204,13 +204,13 @@
                                                                             </constraints>
                                                                         </view>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBk-2m-Y0q">
-                                                                            <rect key="frame" x="10" y="99.5" width="100" height="20.5"/>
+                                                                            <rect key="frame" x="10" y="97.5" width="86" height="20.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kes 20000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkM-bY-uFZ">
-                                                                            <rect key="frame" x="10" y="120" width="100" height="20"/>
+                                                                            <rect key="frame" x="10" y="118" width="100" height="20"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="20" id="qqU-yJ-eow"/>
                                                                             </constraints>
@@ -219,7 +219,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qh2-01-7hy">
-                                                                            <rect key="frame" x="10" y="140" width="100" height="20"/>
+                                                                            <rect key="frame" x="10" y="138" width="86" height="20"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -229,11 +229,11 @@
                                                                         <constraint firstItem="XtY-LD-HO9" firstAttribute="leading" secondItem="Epm-fV-znq" secondAttribute="leading" id="ARc-cw-Jbs"/>
                                                                         <constraint firstItem="Qh2-01-7hy" firstAttribute="top" secondItem="qkM-bY-uFZ" secondAttribute="bottom" id="F0s-wZ-BjZ"/>
                                                                         <constraint firstItem="XtY-LD-HO9" firstAttribute="top" secondItem="Epm-fV-znq" secondAttribute="top" id="LhB-4C-Azt"/>
-                                                                        <constraint firstItem="qkM-bY-uFZ" firstAttribute="trailing" secondItem="PBk-2m-Y0q" secondAttribute="trailing" id="Lwb-gS-ciP"/>
+                                                                        <constraint firstItem="qkM-bY-uFZ" firstAttribute="trailing" secondItem="PBk-2m-Y0q" secondAttribute="trailing" constant="14" id="Lwb-gS-ciP"/>
                                                                         <constraint firstAttribute="bottom" secondItem="qkM-bY-uFZ" secondAttribute="bottom" constant="60" id="Ra8-em-nZt"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="qkM-bY-uFZ" secondAttribute="trailing" constant="70" id="bvp-jN-xfd"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="qkM-bY-uFZ" secondAttribute="trailing" constant="56" id="bvp-jN-xfd"/>
                                                                         <constraint firstItem="qkM-bY-uFZ" firstAttribute="leading" secondItem="PBk-2m-Y0q" secondAttribute="leading" id="fQo-j3-eBk"/>
-                                                                        <constraint firstItem="Qh2-01-7hy" firstAttribute="trailing" secondItem="qkM-bY-uFZ" secondAttribute="trailing" id="gRp-FM-ecj"/>
+                                                                        <constraint firstItem="Qh2-01-7hy" firstAttribute="trailing" secondItem="qkM-bY-uFZ" secondAttribute="trailing" constant="-14" id="gRp-FM-ecj"/>
                                                                         <constraint firstAttribute="trailing" secondItem="XtY-LD-HO9" secondAttribute="trailing" id="iZh-dZ-e8t"/>
                                                                         <constraint firstItem="qkM-bY-uFZ" firstAttribute="leading" secondItem="Epm-fV-znq" secondAttribute="leading" constant="10" id="qrY-DB-EPT"/>
                                                                         <constraint firstAttribute="bottom" secondItem="Qh2-01-7hy" secondAttribute="bottom" constant="40" id="uy1-F3-Ocq"/>
@@ -249,6 +249,10 @@
                                                                 </connections>
                                                             </collectionViewCell>
                                                         </cells>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="i1a-L4-Q16" id="022-W5-i0Q"/>
+                                                            <outlet property="delegate" destination="i1a-L4-Q16" id="z7R-45-oO7"/>
+                                                        </connections>
                                                     </collectionView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

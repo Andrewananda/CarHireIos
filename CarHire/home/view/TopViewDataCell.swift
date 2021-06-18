@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SDWebImage
 
-class TopViewCell: UICollectionViewCell {
+class TopViewDataCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var title: UILabel!
@@ -18,5 +19,10 @@ class TopViewCell: UICollectionViewCell {
        super.awakeFromNib()
        // Initialization code
    }
+    
+    func loadImage(url: String) {
+        let imageUrl = K.api.imageUrl + url
+        imageView.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "cars"))
+    }
    
 }
