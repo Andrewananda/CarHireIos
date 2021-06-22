@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxRelay
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var topDealsCollectionView: UICollectionView!
@@ -24,9 +24,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         observeForLiveData()
+       // bindFeaturedCar()
     }
     
-
+//    private func bindFeaturedCar() {
+//
+//    }
+//
+//
     private func observeForLiveData() {
         viewModel.homeLiveData.subscribe(onNext: {[weak self] response in
             self?.displayTopDeals(topDeals: response.top_deals)
@@ -42,7 +47,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             }
         }
     }
-    
+
     private func displayTopDeals(topDeals: [FeaturedCar]?) {
         //print("TopDeals \(topDeals)")
         if let topDeals = topDeals{
@@ -57,25 +62,28 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 extension ViewController {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == topDealsCollectionView {
-            return 100
+            return 10
         }else {
             return 1
         }
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == topDealsCollectionView {
             let cell = topDealsCollectionView.dequeueReusableCell(withReuseIdentifier: K.viewConstants.topDealsCell, for: indexPath) as! TopViewDataCell
             topDealData.subscribe(onNext: {response in
                 cell.title.text = response?.model?.title
                 cell.duration.text = response?.hire_duration?.name
-                
+                guard let amount = response?.price else {
+                    return
+                }
+                cell.amount.text = "\(String(describing: amount))"
                 guard let imageUrl = response?.photo else {
                     return
                 }
                 cell.loadImage(url: imageUrl)
             }).disposed(by: bag)
-            
+
             return cell
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.viewConstants.reusableFeaturedCarCell, for: indexPath) as! FeaturedCarViewCell
@@ -90,5 +98,6 @@ extension ViewController {
 
             return cell
         }
+
     }
 }
