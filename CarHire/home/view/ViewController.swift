@@ -87,19 +87,11 @@ extension ViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == topDealsCollectionView {
             let cell = topDealsCollectionView.dequeueReusableCell(withReuseIdentifier: K.viewConstants.topDealsCell, for: indexPath) as! TopViewDataCell
-            topDealData.subscribe(onNext: {response in
-                cell.title.text = response?.model?.title
-                cell.duration.text = response?.hire_duration?.name
-                guard let amount = response?.price else {
-                    return
-                }
-                cell.amount.text = "\(String(describing: amount))"
-                guard let imageUrl = response?.photo else {
-                    return
-                }
-                cell.loadImage(url: imageUrl)
-            }).disposed(by: bag)
-
+            cell.title.text = topDealsCount[indexPath.row].model?.title
+            cell.duration.text = topDealsCount[indexPath.row].hire_duration?.name
+            cell.loadImage(url: topDealsCount[indexPath.row].photo)
+            cell.amount.text = "\(String(describing: topDealsCount[indexPath.row].price))"
+            
             return cell
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.viewConstants.reusableFeaturedCarCell, for: indexPath) as! FeaturedCarViewCell
