@@ -16,15 +16,17 @@ class HomeViewModel {
         return homeSubject.asObserver()
     }
     private let homeRepository : HomeRepository
+    var showLoading = BehaviorRelay<Bool>(value: true)
     
     init() {
         self.homeRepository = HomeRepository()
     }
     
     func fetchHomeData() {
-        homeRepository.homeSubject.subscribe { [weak self] response in
+        homeRepository.homeSubject.subscribe(onNext: { [weak self] response in
             self?.homeSubject.onNext(response)
-        }
+            self?.showLoading.accept(false)
+        })
         homeRepository.fetchHomeData()
     }
 }

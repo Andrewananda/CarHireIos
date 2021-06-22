@@ -34,6 +34,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="V8L-zT-Qha">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFS-JI-92I">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
@@ -339,14 +342,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LFS-JI-92I" firstAttribute="leading" secondItem="Bf8-dD-lF6" secondAttribute="leading" id="9HJ-En-V01"/>
+                            <constraint firstItem="V8L-zT-Qha" firstAttribute="centerY" secondItem="R5h-jr-czw" secondAttribute="centerY" id="FPk-eA-zgh"/>
                             <constraint firstItem="LFS-JI-92I" firstAttribute="top" secondItem="Bf8-dD-lF6" secondAttribute="top" id="Vxg-RS-5vi"/>
                             <constraint firstItem="LFS-JI-92I" firstAttribute="bottom" secondItem="Bf8-dD-lF6" secondAttribute="bottom" id="aQ8-EH-Xze"/>
+                            <constraint firstItem="V8L-zT-Qha" firstAttribute="centerX" secondItem="R5h-jr-czw" secondAttribute="centerX" id="jEB-dN-wqu"/>
                             <constraint firstItem="LFS-JI-92I" firstAttribute="trailing" secondItem="Bf8-dD-lF6" secondAttribute="trailing" id="mGK-lo-auA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="T66-4o-UA7"/>
                     <connections>
                         <outlet property="collectionView" destination="rGi-nC-tIT" id="QLj-jS-3TT"/>
+                        <outlet property="loader" destination="V8L-zT-Qha" id="N8o-Zt-sYf"/>
+                        <outlet property="scrollView" destination="LFS-JI-92I" id="KD2-2a-hPD"/>
                         <outlet property="topDealsCollectionView" destination="SpD-fV-gAi" id="GVL-hs-tmf"/>
                     </connections>
                 </viewController>

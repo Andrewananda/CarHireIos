@@ -13,25 +13,37 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var topDealsCollectionView: UICollectionView!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    
     private let viewModel = HomeViewModel()
     private let bag = DisposeBag()
     
     private var featuredCar = BehaviorRelay<FeaturedCar?>(value: nil)
     private var topDealData = BehaviorRelay<FeaturedCar?>(value: nil)
-    private var topData = [FeaturedCar]()
+    private var topDealsCount : [[FeaturedCar]]?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        showLoading()
         observeForLiveData()
-       // bindFeaturedCar()
     }
     
-//    private func bindFeaturedCar() {
-//
-//    }
-//
-//
+    private func showLoading() {
+        viewModel.showLoading.subscribe(onNext: {[weak self] value in
+            if(value) {
+                self?.scrollView.isHidden = true
+                self?.loader.startAnimating()
+            } else {
+                self?.loader.stopAnimating()
+                self?.loader.hidesWhenStopped = true
+                self?.scrollView.isHidden = false
+            }
+        }).disposed(by: bag)
+    }
+    
     private func observeForLiveData() {
         viewModel.homeLiveData.subscribe(onNext: {[weak self] response in
             self?.displayTopDeals(topDeals: response.top_deals)
@@ -49,7 +61,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 
     private func displayTopDeals(topDeals: [FeaturedCar]?) {
-        //print("TopDeals \(topDeals)")
+        if let dataCount = topDeals {
+            topDealsCount?.append(dataCount)
+        }
         if let topDeals = topDeals{
             for topDeal in topDeals {
                 topDealData.accept(topDeal)
