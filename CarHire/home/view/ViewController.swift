@@ -22,7 +22,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     private var featuredCar = BehaviorRelay<FeaturedCar?>(value: nil)
     private var topDealData = BehaviorRelay<FeaturedCar?>(value: nil)
-    private var topDealsCount : [[FeaturedCar]]?
+    private var topDealsCount: [FeaturedCar] = []
     
     
     override func viewDidLoad() {
@@ -37,6 +37,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 self?.scrollView.isHidden = true
                 self?.loader.startAnimating()
             } else {
+                
                 self?.loader.stopAnimating()
                 self?.loader.hidesWhenStopped = true
                 self?.scrollView.isHidden = false
@@ -61,13 +62,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 
     private func displayTopDeals(topDeals: [FeaturedCar]?) {
-        if let dataCount = topDeals {
-            topDealsCount?.append(dataCount)
-        }
         if let topDeals = topDeals{
             for topDeal in topDeals {
                 topDealData.accept(topDeal)
+                topDealsCount.append(topDeal)
             }
+        }
+        DispatchQueue.main.async {
+            self.topDealsCollectionView.reloadData()
         }
     }
     
@@ -76,7 +78,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 extension ViewController {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == topDealsCollectionView {
-            return 10
+            return topDealsCount.count
         }else {
             return 1
         }
