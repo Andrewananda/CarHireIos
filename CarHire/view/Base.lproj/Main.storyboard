@@ -34,8 +34,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="V8L-zT-Qha">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="V8L-zT-Qha">
+                                <rect key="frame" x="197" y="438" width="50" height="50"/>
                             </activityIndicatorView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFS-JI-92I">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
@@ -189,6 +189,7 @@
                                                         <constraints>
                                                             <constraint firstItem="R0S-fa-EXX" firstAttribute="top" secondItem="eBc-NX-Buu" secondAttribute="top" constant="10" id="3E2-G5-bkj"/>
                                                             <constraint firstAttribute="trailing" secondItem="qIg-CI-BZs" secondAttribute="trailing" constant="10" id="531-Of-CyT"/>
+                                                            <constraint firstItem="qIg-CI-BZs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="R0S-fa-EXX" secondAttribute="trailing" constant="8" symbolic="YES" id="7DC-6Y-Fzb"/>
                                                             <constraint firstItem="qIg-CI-BZs" firstAttribute="top" secondItem="eBc-NX-Buu" secondAttribute="top" constant="24" id="WeD-bC-EQV"/>
                                                             <constraint firstAttribute="trailing" secondItem="qIg-CI-BZs" secondAttribute="trailing" constant="10" id="WzJ-Id-jyb"/>
                                                             <constraint firstItem="R0S-fa-EXX" firstAttribute="leading" secondItem="eBc-NX-Buu" secondAttribute="leading" constant="10" id="mXm-rw-3ie"/>
@@ -342,10 +343,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LFS-JI-92I" firstAttribute="leading" secondItem="Bf8-dD-lF6" secondAttribute="leading" id="9HJ-En-V01"/>
-                            <constraint firstItem="V8L-zT-Qha" firstAttribute="centerY" secondItem="R5h-jr-czw" secondAttribute="centerY" id="FPk-eA-zgh"/>
+                            <constraint firstItem="V8L-zT-Qha" firstAttribute="centerY" secondItem="R5h-jr-czw" secondAttribute="centerY" constant="15" id="FPk-eA-zgh"/>
                             <constraint firstItem="LFS-JI-92I" firstAttribute="top" secondItem="Bf8-dD-lF6" secondAttribute="top" id="Vxg-RS-5vi"/>
                             <constraint firstItem="LFS-JI-92I" firstAttribute="bottom" secondItem="Bf8-dD-lF6" secondAttribute="bottom" id="aQ8-EH-Xze"/>
-                            <constraint firstItem="V8L-zT-Qha" firstAttribute="centerX" secondItem="R5h-jr-czw" secondAttribute="centerX" id="jEB-dN-wqu"/>
+                            <constraint firstItem="V8L-zT-Qha" firstAttribute="centerX" secondItem="R5h-jr-czw" secondAttribute="centerX" constant="15" id="jEB-dN-wqu"/>
                             <constraint firstItem="LFS-JI-92I" firstAttribute="trailing" secondItem="Bf8-dD-lF6" secondAttribute="trailing" id="mGK-lo-auA"/>
                         </constraints>
                     </view>
