@@ -162,7 +162,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baZ-Z9-fsm">
                                                 <rect key="frame" x="0.0" y="210" width="414" height="100"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBc-NX-Buu">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBc-NX-Buu" customClass="CardView" customModule="CarHire" customModuleProvider="target">
                                                         <rect key="frame" x="15" y="15" width="384" height="70"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Cars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0S-fa-EXX">
@@ -221,7 +221,7 @@
                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="topDealsRusableCell" id="YSN-UU-SxV" customClass="TopViewDataCell" customModule="CarHire" customModuleProvider="target">
                                                                 <rect key="frame" x="7" y="0.0" width="180" height="200"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wJC-h9-JfO">
+                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wJC-h9-JfO" customClass="CardView" customModule="CarHire" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
