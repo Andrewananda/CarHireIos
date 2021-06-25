@@ -356,11 +356,40 @@
                         <outlet property="loader" destination="V8L-zT-Qha" id="N8o-Zt-sYf"/>
                         <outlet property="scrollView" destination="LFS-JI-92I" id="KD2-2a-hPD"/>
                         <outlet property="topDealsCollectionView" destination="SpD-fV-gAi" id="GVL-hs-tmf"/>
+                        <segue destination="dYn-7f-Lhf" kind="show" identifier="CarDetail" id="pgk-RB-Fxj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYg-dC-J6t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1179.7101449275362" y="-370.3125"/>
+        </scene>
+        <!--Car Detail-->
+        <scene sceneID="1No-5H-7tx">
+            <objects>
+                <viewController storyboardIdentifier="CarDetail" id="dYn-7f-Lhf" customClass="CarDetail" customModule="CarHire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Uk-Rb-Hgo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z30-0y-BBm">
+                                <rect key="frame" x="41" y="123" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GdR-O4-BTu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dto-hP-lWr"/>
+                    <connections>
+                        <outlet property="testLabel" destination="z30-0y-BBm" id="dMO-Pn-84Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IVN-vK-OTF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2031" y="-372"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OXn-PR-pMC">
