@@ -16,5 +16,6 @@ struct K {
     struct viewConstants{
         static let reusableFeaturedCarCell = "featuredCarCell"
         static let topDealsCell = "topDealsRusableCell"
+        static let carDetailSegue = "CarDetail"
     }
 }

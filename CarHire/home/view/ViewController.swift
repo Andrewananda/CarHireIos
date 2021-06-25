@@ -116,14 +116,14 @@ extension ViewController {
         if collectionView == topDealsCollectionView {
             print("\(topDealsCount[indexPath.row])")
             testText = topDealsCount[indexPath.row].model?.title
-            self.performSegue(withIdentifier: "CarDetail", sender: self)
+            self.performSegue(withIdentifier: K.viewConstants.carDetailSegue, sender: self)
         }else {
             print("selected featuredCar \(topDealsCount[indexPath.row])")
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "CarDetail" {
+        if segue.identifier == K.viewConstants.carDetailSegue {
             let vc = segue.destination as! CarDetail
             vc.labelText = testText
         }
