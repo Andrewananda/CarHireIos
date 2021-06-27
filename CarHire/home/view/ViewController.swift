@@ -119,6 +119,8 @@ extension ViewController {
             self.performSegue(withIdentifier: K.viewConstants.carDetailSegue, sender: self)
         }else {
             print("selected featuredCar \(topDealsCount[indexPath.row])")
+            testText = topDealsCount[indexPath.row].model?.title
+            self.performSegue(withIdentifier: K.viewConstants.carDetailSegue, sender: self)
         }
     }
     

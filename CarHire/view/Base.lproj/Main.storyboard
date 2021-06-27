@@ -371,25 +371,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z30-0y-BBm">
-                                <rect key="frame" x="41" y="123" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ebh-SJ-xlc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHl-e7-cVP">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIj-i2-izV">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="68W-y4-2SM">
+                                        <rect key="frame" x="0.0" y="200" width="414" height="525"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GdR-O4-BTu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ebh-SJ-xlc" firstAttribute="leading" secondItem="GdR-O4-BTu" secondAttribute="leading" id="AI5-6W-2N4"/>
+                            <constraint firstItem="GdR-O4-BTu" firstAttribute="trailing" secondItem="ebh-SJ-xlc" secondAttribute="trailing" id="IRz-OS-I8f"/>
+                            <constraint firstItem="GdR-O4-BTu" firstAttribute="bottom" secondItem="ebh-SJ-xlc" secondAttribute="bottom" id="ScF-rp-WUj"/>
+                            <constraint firstItem="ebh-SJ-xlc" firstAttribute="top" secondItem="GdR-O4-BTu" secondAttribute="top" id="ccb-VE-Ebx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Dto-hP-lWr"/>
                     <connections>
-                        <outlet property="testLabel" destination="z30-0y-BBm" id="dMO-Pn-84Z"/>
+                        <outlet property="imageCollectionView" destination="XIj-i2-izV" id="GWr-OT-pIZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVN-vK-OTF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2031" y="-372"/>
+            <point key="canvasLocation" x="2030.4347826086957" y="-372.32142857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OXn-PR-pMC">
