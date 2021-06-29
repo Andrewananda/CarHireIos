@@ -24,6 +24,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     private var topDealData = BehaviorRelay<FeaturedCar?>(value: nil)
     private var topDealsCount: [FeaturedCar] = []
     
+    private var carDetails: FeaturedCar?
     private var testText: String?
     
     override func viewDidLoad() {
@@ -113,21 +114,14 @@ extension ViewController {
 
 extension ViewController {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if collectionView == topDealsCollectionView {
-            print("\(topDealsCount[indexPath.row])")
-            testText = topDealsCount[indexPath.row].model?.title
-            self.performSegue(withIdentifier: K.viewConstants.carDetailSegue, sender: self)
-        }else {
-            print("selected featuredCar \(topDealsCount[indexPath.row])")
-            testText = topDealsCount[indexPath.row].model?.title
-            self.performSegue(withIdentifier: K.viewConstants.carDetailSegue, sender: self)
-        }
+        carDetails = topDealsCount[indexPath.row]
+        self.performSegue(withIdentifier: K.viewConstants.carDetailSegue, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.viewConstants.carDetailSegue {
-            let vc = segue.destination as! CarDetail
-            vc.labelText = testText
+            let vc = segue.destination as! CarDetailController
+            vc.carDetail = carDetails
         }
     }
 }
