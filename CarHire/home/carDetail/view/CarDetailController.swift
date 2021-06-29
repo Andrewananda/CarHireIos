@@ -41,6 +41,11 @@ class CarDetailController: UIViewController {
         }
     }
     
+    @IBAction func createEnquiry(_ sender: Any) {
+        performSegue(withIdentifier: K.viewConstants.enquirySegue, sender: self)
+    }
+    
+    
     
 //    lazy var carousel = Carousel(frame: .zero, urls: urls)
 //

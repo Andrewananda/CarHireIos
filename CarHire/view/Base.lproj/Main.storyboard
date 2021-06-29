@@ -450,6 +450,9 @@
                                                                 <state key="normal" title="Create Enquiry">
                                                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="createEnquiry:" destination="dYn-7f-Lhf" eventType="touchUpInside" id="iGq-Lm-dR9"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -592,7 +595,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="amI-6d-eks">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="PJZ-pn-Wag" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="PJZ-pn-Wag" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="3Yk-hY-nzq"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hfs-NY-nPb">
