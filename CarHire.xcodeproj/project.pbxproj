@@ -27,6 +27,7 @@
 		58A8D45026529DB100F6C58D /* CarHireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A8D44F26529DB100F6C58D /* CarHireUITests.swift */; };
 		58D183D62674B70200EBC963 /* FeaturedCarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D183D52674B70200EBC963 /* FeaturedCarViewCell.swift */; };
 		58D183D82675051200EBC963 /* TopViewDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D183D72675051200EBC963 /* TopViewDataCell.swift */; };
+		58F09995268B9F8900A5219F /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F09994268B9F8900A5219F /* Util.swift */; };
 		905ED099030CB6BC2B313A9F /* Pods_CarHire_CarHireUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F3F216B47BB5A06DD5B180 /* Pods_CarHire_CarHireUITests.framework */; };
 		E23BC6C460BE158119FEE139 /* Pods_CarHire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188BF6909B311DF77C949626 /* Pods_CarHire.framework */; };
 		EED8C87609D1648B40F6C3C7 /* Pods_CarHireTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573699CE684703ED48A82131 /* Pods_CarHireTests.framework */; };
@@ -81,6 +82,7 @@
 		58A8D45126529DB100F6C58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58D183D52674B70200EBC963 /* FeaturedCarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCarViewCell.swift; sourceTree = "<group>"; };
 		58D183D72675051200EBC963 /* TopViewDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewDataCell.swift; sourceTree = "<group>"; };
+		58F09994268B9F8900A5219F /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		73E035430CF198AEBD8FABCE /* Pods-CarHireTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarHireTests.debug.xcconfig"; path = "Target Support Files/Pods-CarHireTests/Pods-CarHireTests.debug.xcconfig"; sourceTree = "<group>"; };
 		98F3F216B47BB5A06DD5B180 /* Pods_CarHire_CarHireUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarHire_CarHireUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC75C0D6E0DC3EEA254BC277 /* Pods-CarHireTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarHireTests.release.xcconfig"; path = "Target Support Files/Pods-CarHireTests/Pods-CarHireTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				58659ACB26880D5200BCCB7B /* carousel */,
 				58913FDC2655A5D600AB4D23 /* Constants.swift */,
 				5839DAC82684EC0B00847A3F /* CardView.swift */,
+				58F09994268B9F8900A5219F /* Util.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				58A8D43226529DB000F6C58D /* ViewController.swift in Sources */,
 				5817DD57266024A2000F4B8E /* HomeViewModel.swift in Sources */,
 				5817DD5326602088000F4B8E /* HomeRepository.swift in Sources */,
+				58F09995268B9F8900A5219F /* Util.swift in Sources */,
 				58D183D62674B70200EBC963 /* FeaturedCarViewCell.swift in Sources */,
 				5839DACE2684F7DB00847A3F /* CarDetailController.swift in Sources */,
 				58D183D82675051200EBC963 /* TopViewDataCell.swift in Sources */,

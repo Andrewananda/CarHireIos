@@ -34,7 +34,7 @@ class CarDetailController: UIViewController {
     func setCarDetails(with data: FeaturedCar?) {
         if let carDetail = data {
             carName.text = carDetail.model?.title
-            hiringPrice.text = "\(carDetail.price)"
+            hiringPrice.text = numberFormatter(number: carDetail.price)
         }else {
             print("No data found!")
         }
