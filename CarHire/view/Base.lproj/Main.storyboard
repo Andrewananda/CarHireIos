@@ -366,7 +366,7 @@
         <!--Car Detail Controller-->
         <scene sceneID="1No-5H-7tx">
             <objects>
-                <viewController storyboardIdentifier="CarDetail" id="dYn-7f-Lhf" customClass="CarDetailController" customModule="CarHire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CarDetail" interfaceStyle="light" id="dYn-7f-Lhf" customClass="CarDetailController" customModule="CarHire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Uk-Rb-Hgo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -440,12 +440,26 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etg-J4-q1f">
+                                                                <rect key="frame" x="50" y="455" width="314" height="50"/>
+                                                                <color key="backgroundColor" red="0.38431372549999998" green="0.0" blue="0.93333333330000001" alpha="1" colorSpace="deviceRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="D2G-v2-wLd"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                <state key="normal" title="Create Enquiry">
+                                                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                                                </state>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="Wwq-l7-L13" secondAttribute="trailing" constant="10" id="409-Bc-ywU"/>
+                                                            <constraint firstAttribute="trailing" secondItem="etg-J4-q1f" secondAttribute="trailing" constant="50" id="4dv-Wi-SjK"/>
                                                             <constraint firstItem="Y27-c1-B4R" firstAttribute="top" secondItem="CfW-mJ-PWb" secondAttribute="top" constant="10" id="4qr-Jb-AaX"/>
+                                                            <constraint firstAttribute="bottom" secondItem="etg-J4-q1f" secondAttribute="bottom" constant="20" id="CvO-S1-sjx"/>
                                                             <constraint firstItem="Wwq-l7-L13" firstAttribute="top" secondItem="Y27-c1-B4R" secondAttribute="bottom" constant="30" id="GwG-Ol-f5M"/>
+                                                            <constraint firstItem="etg-J4-q1f" firstAttribute="leading" secondItem="CfW-mJ-PWb" secondAttribute="leading" constant="50" id="J9X-Bb-hh2"/>
                                                             <constraint firstItem="k1b-qf-1ev" firstAttribute="leading" secondItem="CfW-mJ-PWb" secondAttribute="leading" constant="10" id="WDC-fH-V3g"/>
                                                             <constraint firstItem="k1b-qf-1ev" firstAttribute="top" secondItem="Y27-c1-B4R" secondAttribute="bottom" constant="5" id="dIl-Mw-9iJ"/>
                                                             <constraint firstItem="Wwq-l7-L13" firstAttribute="leading" secondItem="CfW-mJ-PWb" secondAttribute="leading" constant="10" id="hON-DR-npt"/>
@@ -496,11 +510,28 @@
                         <outlet property="carDescription" destination="Wwq-l7-L13" id="62b-bM-IjS"/>
                         <outlet property="carName" destination="Y27-c1-B4R" id="CAg-Iq-AbY"/>
                         <outlet property="hiringPrice" destination="k1b-qf-1ev" id="Ahi-1P-S5t"/>
+                        <segue destination="PJZ-pn-Wag" kind="show" identifier="enquirySegue" id="CW8-Tt-OW5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVN-vK-OTF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2030.4347826086957" y="-372.32142857142856"/>
+        </scene>
+        <!--Enquiry View Controller-->
+        <scene sceneID="DFY-M6-Z8q">
+            <objects>
+                <viewController id="KqV-YX-fM1" customClass="EnquiryViewController" customModule="CarHire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VZU-oX-kgE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="En5-Np-LbM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j2K-yb-Hzf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GWA-Kx-byd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4657.971014492754" y="-372.32142857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OXn-PR-pMC">
@@ -557,6 +588,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Col-J1-2Ob" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="269.56521739130437" y="407.8125"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="amI-6d-eks">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="PJZ-pn-Wag" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="3Yk-hY-nzq"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hfs-NY-nPb">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="x89-hY-HpN" kind="relationship" relationship="viewControllers" id="2CO-z5-Ox1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5xy-zU-382" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2837.68115942029" y="-372.32142857142856"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="SfZ-Te-HZU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x89-hY-HpN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="bWq-Yn-s5a"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xol-6e-bs1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KqV-YX-fM1" kind="relationship" relationship="rootViewController" id="gib-5P-Slm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xgo-a5-qFh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3747.826086956522" y="-372.32142857142856"/>
         </scene>
     </scenes>
     <resources>

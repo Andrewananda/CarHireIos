@@ -28,6 +28,7 @@
 		58D183D62674B70200EBC963 /* FeaturedCarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D183D52674B70200EBC963 /* FeaturedCarViewCell.swift */; };
 		58D183D82675051200EBC963 /* TopViewDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D183D72675051200EBC963 /* TopViewDataCell.swift */; };
 		58F09995268B9F8900A5219F /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F09994268B9F8900A5219F /* Util.swift */; };
+		58F09999268BA78300A5219F /* EnquiryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F09998268BA78300A5219F /* EnquiryViewController.swift */; };
 		905ED099030CB6BC2B313A9F /* Pods_CarHire_CarHireUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F3F216B47BB5A06DD5B180 /* Pods_CarHire_CarHireUITests.framework */; };
 		E23BC6C460BE158119FEE139 /* Pods_CarHire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188BF6909B311DF77C949626 /* Pods_CarHire.framework */; };
 		EED8C87609D1648B40F6C3C7 /* Pods_CarHireTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573699CE684703ED48A82131 /* Pods_CarHireTests.framework */; };
@@ -83,6 +84,7 @@
 		58D183D52674B70200EBC963 /* FeaturedCarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCarViewCell.swift; sourceTree = "<group>"; };
 		58D183D72675051200EBC963 /* TopViewDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewDataCell.swift; sourceTree = "<group>"; };
 		58F09994268B9F8900A5219F /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		58F09998268BA78300A5219F /* EnquiryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnquiryViewController.swift; sourceTree = "<group>"; };
 		73E035430CF198AEBD8FABCE /* Pods-CarHireTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarHireTests.debug.xcconfig"; path = "Target Support Files/Pods-CarHireTests/Pods-CarHireTests.debug.xcconfig"; sourceTree = "<group>"; };
 		98F3F216B47BB5A06DD5B180 /* Pods_CarHire_CarHireUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarHire_CarHireUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC75C0D6E0DC3EEA254BC277 /* Pods-CarHireTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarHireTests.release.xcconfig"; path = "Target Support Files/Pods-CarHireTests/Pods-CarHireTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 		58A8D42C26529DAF00F6C58D /* CarHire */ = {
 			isa = PBXGroup;
 			children = (
+				58F09996268BA76600A5219F /* enquiry */,
 				58913FDB2655A5C800AB4D23 /* utils */,
 				58913FD62655A22200AB4D23 /* network */,
 				58913FD22655A12B00AB4D23 /* home */,
@@ -288,6 +291,22 @@
 				58A8D45126529DB100F6C58D /* Info.plist */,
 			);
 			path = CarHireUITests;
+			sourceTree = "<group>";
+		};
+		58F09996268BA76600A5219F /* enquiry */ = {
+			isa = PBXGroup;
+			children = (
+				58F09997268BA77000A5219F /* view */,
+			);
+			path = enquiry;
+			sourceTree = "<group>";
+		};
+		58F09997268BA77000A5219F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				58F09998268BA78300A5219F /* EnquiryViewController.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		9B5E71D3FFE132639B810D1F /* Pods */ = {
@@ -549,6 +568,7 @@
 				5839DACE2684F7DB00847A3F /* CarDetailController.swift in Sources */,
 				58D183D82675051200EBC963 /* TopViewDataCell.swift in Sources */,
 				58A8D42E26529DB000F6C58D /* AppDelegate.swift in Sources */,
+				58F09999268BA78300A5219F /* EnquiryViewController.swift in Sources */,
 				58913FD82655A23C00AB4D23 /* NetworkService.swift in Sources */,
 				58913FDA2655A35600AB4D23 /* ApiResponse.swift in Sources */,
 				5817DD55266021A1000F4B8E /* HomeResponse.swift in Sources */,

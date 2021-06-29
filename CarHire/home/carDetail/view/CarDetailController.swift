@@ -19,6 +19,7 @@ class CarDetailController: UIViewController {
         super.viewDidLoad()
         setUpCarDetails()
         setCarDetails(with: carDetail)
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     let urls: [URL] = [
@@ -39,6 +40,7 @@ class CarDetailController: UIViewController {
             print("No data found!")
         }
     }
+    
     
 //    lazy var carousel = Carousel(frame: .zero, urls: urls)
 //
