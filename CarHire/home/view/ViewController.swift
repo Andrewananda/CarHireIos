@@ -115,7 +115,12 @@ extension ViewController {
 extension ViewController {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         carDetails = topDealsCount[indexPath.row]
-        self.performSegue(withIdentifier: K.viewConstants.carDetailSegue, sender: self)
+        if collectionView == topDealsCollectionView {
+            self.performSegue(withIdentifier: K.viewConstants.carDetailSegue, sender: self)
+        }else {
+            print("selected featuredCar \(topDealsCount[indexPath.row])")
+            self.performSegue(withIdentifier: K.viewConstants.carDetailSegue, sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

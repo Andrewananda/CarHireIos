@@ -32,7 +32,6 @@ class CarDetailController: UIViewController {
     }
     
     func setCarDetails(with data: FeaturedCar?) {
-        print("Data\(data)")
         if let carDetail = data {
             carName.text = carDetail.model?.title
             hiringPrice.text = "\(carDetail.price)"
