@@ -103,6 +103,10 @@ extension ViewController {
                 guard let imageUrl = response?.photo else {
                     return
                 }
+                guard let amount = response?.price else {
+                    return
+                }
+                cell.amount.text = "Kes \(String(describing: amount))"
                 cell.loadImage(url: imageUrl)
             }).disposed(by: bag)
 

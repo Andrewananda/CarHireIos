@@ -13,6 +13,7 @@ class FeaturedCarViewCell: UICollectionViewCell {
     @IBOutlet weak var carName: UILabel!
     @IBOutlet weak var plateNumber: UILabel!
     @IBOutlet weak var featuredCarImage: UIImageView!
+    @IBOutlet weak var amount: UILabel!
     
      override func awakeFromNib() {
         super.awakeFromNib()

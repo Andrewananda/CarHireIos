@@ -43,7 +43,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TyF-Ah-ZbI">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="820"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etc-HT-7VR">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etc-HT-7VR" customClass="CardView" customModule="CarHire" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rGi-nC-tIT">
@@ -105,7 +105,7 @@
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Garage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Di4-lx-aH5">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kes 10,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Di4-lx-aH5">
                                                                             <rect key="frame" x="275" y="110" width="100" height="20"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="PwI-mL-3tm"/>
@@ -135,6 +135,7 @@
                                                                     <constraint firstItem="Di4-lx-aH5" firstAttribute="top" secondItem="EdS-zQ-t4I" secondAttribute="bottom" constant="10" id="xlo-ne-Hrs"/>
                                                                 </constraints>
                                                                 <connections>
+                                                                    <outlet property="amount" destination="Di4-lx-aH5" id="uyh-Fi-ChY"/>
                                                                     <outlet property="carName" destination="3ND-sH-JgE" id="mlq-Iu-83w"/>
                                                                     <outlet property="featuredCarImage" destination="hAW-i8-C3g" id="v0U-AI-V08"/>
                                                                     <outlet property="plateNumber" destination="AZb-sH-fvV" id="xLm-X2-GoZ"/>
@@ -158,6 +159,14 @@
                                                     <constraint firstAttribute="bottom" secondItem="rGi-nC-tIT" secondAttribute="bottom" id="LsR-7q-sz0"/>
                                                     <constraint firstItem="rGi-nC-tIT" firstAttribute="top" secondItem="etc-HT-7VR" secondAttribute="top" id="PPI-f5-ZO3"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="connerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="ofsetShaddowOpacity">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baZ-Z9-fsm">
                                                 <rect key="frame" x="0.0" y="210" width="414" height="100"/>
@@ -177,12 +186,14 @@
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIg-CI-BZs">
                                                                 <rect key="frame" x="354" y="24" width="20" height="20"/>
-                                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="20" id="eQ6-Nu-PbH"/>
                                                                     <constraint firstAttribute="width" constant="20" id="nti-NZ-7Mg"/>
                                                                 </constraints>
-                                                                <state key="normal" image="greaterthan" catalog="system"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" image="greaterthan" catalog="system">
+                                                                    <color key="titleShadowColor" red="0.99990230798721313" green="1" blue="0.99988001585006714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.38431372549019605" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="deviceRGB"/>
