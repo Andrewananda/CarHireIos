@@ -33,6 +33,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         observeForLiveData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     private func showLoading() {
         viewModel.showLoading.subscribe(onNext: {[weak self] value in
             if(value) {
