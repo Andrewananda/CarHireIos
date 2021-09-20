@@ -92,7 +92,7 @@ extension ViewController {
             cell.title.text = topDealsCount[indexPath.row].model?.title
             cell.duration.text = topDealsCount[indexPath.row].hire_duration?.name
             cell.loadImage(url: topDealsCount[indexPath.row].photo)
-            cell.amount.text = "\(String(describing: topDealsCount[indexPath.row].price))"
+            cell.amount.text = "Kes \(numberFormatter(number: topDealsCount[indexPath.row].price))"
             
             return cell
         }else {
@@ -106,7 +106,7 @@ extension ViewController {
                 guard let amount = response?.price else {
                     return
                 }
-                cell.amount.text = "Kes \(String(describing: amount))"
+                cell.amount.text = "Kes \(numberFormatter(number: amount))"
                 cell.loadImage(url: imageUrl)
             }).disposed(by: bag)
 

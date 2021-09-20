@@ -32,10 +32,10 @@ class CarDetailController: UIViewController {
         carDescription.text = "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real. As Cicero would put it, “Um, not so fast.The placeholder text, beginning with the line “Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin."
     }
     
-    func setCarDetails(with data: FeaturedCar?) {
+    private func setCarDetails(with data: FeaturedCar?) {
         if let carDetail = data {
             carName.text = carDetail.model?.title
-            hiringPrice.text = numberFormatter(number: carDetail.price)
+            hiringPrice.text = "Kes\(numberFormatter(number: carDetail.price))"
         }else {
             print("No data found!")
         }
