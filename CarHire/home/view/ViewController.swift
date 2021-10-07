@@ -29,8 +29,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showLoading()
         observeForLiveData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        showLoading()
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5801046D270ECBC600ED4BF6 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5801046C270ECBC600ED4BF6 /* IntroViewController.swift */; };
 		5817DD5326602088000F4B8E /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5817DD5226602088000F4B8E /* HomeRepository.swift */; };
 		5817DD55266021A1000F4B8E /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5817DD54266021A1000F4B8E /* HomeResponse.swift */; };
 		5817DD57266024A2000F4B8E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5817DD56266024A2000F4B8E /* HomeViewModel.swift */; };
@@ -57,6 +58,7 @@
 		188BF6909B311DF77C949626 /* Pods_CarHire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarHire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D1494D71E8F5A9F3EE25C49 /* Pods-CarHire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarHire.debug.xcconfig"; path = "Target Support Files/Pods-CarHire/Pods-CarHire.debug.xcconfig"; sourceTree = "<group>"; };
 		573699CE684703ED48A82131 /* Pods_CarHireTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarHireTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5801046C270ECBC600ED4BF6 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		5817DD5226602088000F4B8E /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		5817DD54266021A1000F4B8E /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
 		5817DD56266024A2000F4B8E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 				573699CE684703ED48A82131 /* Pods_CarHireTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5801046B270ECBA800ED4BF6 /* intro */ = {
+			isa = PBXGroup;
+			children = (
+				5801046C270ECBC600ED4BF6 /* IntroViewController.swift */,
+			);
+			path = intro;
 			sourceTree = "<group>";
 		};
 		5817DD5126602076000F4B8E /* repository */ = {
@@ -264,6 +274,7 @@
 		58A8D42C26529DAF00F6C58D /* CarHire */ = {
 			isa = PBXGroup;
 			children = (
+				5801046B270ECBA800ED4BF6 /* intro */,
 				58F09996268BA76600A5219F /* enquiry */,
 				58913FDB2655A5C800AB4D23 /* utils */,
 				58913FD62655A22200AB4D23 /* network */,
@@ -569,6 +580,7 @@
 				58D183D82675051200EBC963 /* TopViewDataCell.swift in Sources */,
 				58A8D42E26529DB000F6C58D /* AppDelegate.swift in Sources */,
 				58F09999268BA78300A5219F /* EnquiryViewController.swift in Sources */,
+				5801046D270ECBC600ED4BF6 /* IntroViewController.swift in Sources */,
 				58913FD82655A23C00AB4D23 /* NetworkService.swift in Sources */,
 				58913FDA2655A35600AB4D23 /* ApiResponse.swift in Sources */,
 				5817DD55266021A1000F4B8E /* HomeResponse.swift in Sources */,
