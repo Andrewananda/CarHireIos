@@ -6,14 +6,15 @@
 //
 
 import UIKit
+import RxRelay
 
 class SigninViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var txtUserName: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
-    var shouldNotChangeUserName: Bool = false
-    var shouldNotChangePassword: Bool = false
+    var shouldNotChangeUserName = BehaviorRelay<Bool>(value: false)
+    var shouldNotChangePassword = BehaviorRelay<Bool>(value: false)
     
     var viewModel: SignInViewModel = SignInViewModel()
 
@@ -32,23 +33,21 @@ class SigninViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func validateInputs() {
-        if shouldNotChangeUserName {
+        if shouldNotChangeUserName.value {
             if isUsernameValied() {
-                if shouldNotChangePassword {
+                if shouldNotChangePassword.value {
                     //Submit inputs
-                    print("UsernameTxt \(txtUserName.text)")
-                    var username = txtUserName!.text
-                    var password =  txtPassword!.text
+                    let username = txtUserName!.text
+                    let password =  txtPassword!.text
                     viewModel.loginUser(username: username!, password: password!)
                 }
             } else {
                 //Enter valied email or phone number
-                print("!SigningIn Repository.....")
+                print("IsNotValied....")
                 toastView(messsage: K.errorResponse.usernameOrPhoneError, view: self.view)
             }
         }else {
             //username cannot be empty
-            print("!SigningIn Repository.....")
             toastView(messsage: K.errorResponse.usernameError, view: self.view)
         }
     }
@@ -71,12 +70,14 @@ extension SigninViewController {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         switch textField {
         case txtUserName:
-            if !shouldNotChangeUserName {
+            if !shouldNotChangeUserName.value {
+                shouldNotChangeUserName.accept(true)
                 txtUserName.text = ""
                 txtUserName.textColor = .black
             }
         case txtPassword:
-            if !shouldNotChangePassword {
+            if !shouldNotChangePassword.value {
+                shouldNotChangePassword.accept(true)
                 txtPassword.text = ""
                 txtPassword.isSecureTextEntry = true
                 txtPassword.textColor = .black
@@ -93,18 +94,18 @@ extension SigninViewController {
             if txtUserName.text == "" {
                 txtUserName.text = "Enter Email / Phone"
                 txtUserName.textColor = .gray
-                shouldNotChangeUserName = false
+                shouldNotChangeUserName.accept(false)
             }else {
-                shouldNotChangeUserName = true
+                shouldNotChangeUserName.accept(true)
             }
         case txtPassword:
             if txtPassword.text == "" {
                 txtPassword.isSecureTextEntry =  false
                 txtPassword.text = "Enter Password"
                 txtPassword.textColor = .gray
-                shouldNotChangePassword = false
+                shouldNotChangePassword.accept(false)
             }else {
-                shouldNotChangePassword = true
+                shouldNotChangePassword.accept(true)
             }
         default:
             if txtPassword.text == "" {
