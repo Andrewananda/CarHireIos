@@ -10,12 +10,12 @@ import Alamofire
 
 class NetworkService {
     
-    func fetchData<T: Codable>(url: String, method: HTTPMethod, completion: @escaping (Result<T, Errors>) -> Void) {
+    func fetchData<T: Codable>(url: String, method: HTTPMethod, params:[String: Any]?, completion: @escaping (Result<T, Errors>) -> Void) {
         
         let endpoint = K.api.baseUrl + url
         print("Url \(endpoint)")
         
-        AF.request(endpoint, method: method, parameters: nil, encoding: JSONEncoding.default, headers: HTTPHeaders.default)
+        AF.request(endpoint, method: method, parameters: params, encoding: JSONEncoding.default, headers: HTTPHeaders.default)
             .validate(statusCode: 200..<300).responseJSON { response in
                 
                 if let httpUrlResponse = response.response, 200..<300 ~= httpUrlResponse.statusCode {

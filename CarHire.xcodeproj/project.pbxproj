@@ -10,6 +10,9 @@
 		5801046D270ECBC600ED4BF6 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5801046C270ECBC600ED4BF6 /* IntroViewController.swift */; };
 		58010473270ED5AD00ED4BF6 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58010472270ED5AD00ED4BF6 /* SigninViewController.swift */; };
 		58010477270ED5EA00ED4BF6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58010476270ED5EA00ED4BF6 /* SignUpViewController.swift */; };
+		5801047A270F1B2100ED4BF6 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58010479270F1B2100ED4BF6 /* SignInViewModel.swift */; };
+		5801047D270F1B5A00ED4BF6 /* SignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5801047C270F1B5A00ED4BF6 /* SignInRepository.swift */; };
+		58010480270F1BD000ED4BF6 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5801047F270F1BD000ED4BF6 /* SignInModel.swift */; };
 		5817DD5326602088000F4B8E /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5817DD5226602088000F4B8E /* HomeRepository.swift */; };
 		5817DD55266021A1000F4B8E /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5817DD54266021A1000F4B8E /* HomeResponse.swift */; };
 		5817DD57266024A2000F4B8E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5817DD56266024A2000F4B8E /* HomeViewModel.swift */; };
@@ -63,6 +66,9 @@
 		5801046C270ECBC600ED4BF6 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		58010472270ED5AD00ED4BF6 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		58010476270ED5EA00ED4BF6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		58010479270F1B2100ED4BF6 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		5801047C270F1B5A00ED4BF6 /* SignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRepository.swift; sourceTree = "<group>"; };
+		5801047F270F1BD000ED4BF6 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		5817DD5226602088000F4B8E /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		5817DD54266021A1000F4B8E /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
 		5817DD56266024A2000F4B8E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -155,6 +161,9 @@
 		5801046F270ED58100ED4BF6 /* signIn */ = {
 			isa = PBXGroup;
 			children = (
+				5801047E270F1BBC00ED4BF6 /* model */,
+				5801047B270F1B4600ED4BF6 /* repository */,
+				58010478270F1A3400ED4BF6 /* viewModel */,
 				58010471270ED59900ED4BF6 /* view */,
 			);
 			path = signIn;
@@ -182,6 +191,30 @@
 				58010476270ED5EA00ED4BF6 /* SignUpViewController.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		58010478270F1A3400ED4BF6 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				58010479270F1B2100ED4BF6 /* SignInViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		5801047B270F1B4600ED4BF6 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				5801047C270F1B5A00ED4BF6 /* SignInRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		5801047E270F1BBC00ED4BF6 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5801047F270F1BD000ED4BF6 /* SignInModel.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		5817DD5126602076000F4B8E /* repository */ = {
@@ -621,16 +654,19 @@
 				5817DD57266024A2000F4B8E /* HomeViewModel.swift in Sources */,
 				5817DD5326602088000F4B8E /* HomeRepository.swift in Sources */,
 				58F09995268B9F8900A5219F /* Util.swift in Sources */,
+				58010480270F1BD000ED4BF6 /* SignInModel.swift in Sources */,
 				58D183D62674B70200EBC963 /* FeaturedCarViewCell.swift in Sources */,
 				5839DACE2684F7DB00847A3F /* CarDetailController.swift in Sources */,
 				58D183D82675051200EBC963 /* TopViewDataCell.swift in Sources */,
 				58A8D42E26529DB000F6C58D /* AppDelegate.swift in Sources */,
+				5801047A270F1B2100ED4BF6 /* SignInViewModel.swift in Sources */,
 				58F09999268BA78300A5219F /* EnquiryViewController.swift in Sources */,
 				5801046D270ECBC600ED4BF6 /* IntroViewController.swift in Sources */,
 				58010473270ED5AD00ED4BF6 /* SigninViewController.swift in Sources */,
 				58913FD82655A23C00AB4D23 /* NetworkService.swift in Sources */,
 				58913FDA2655A35600AB4D23 /* ApiResponse.swift in Sources */,
 				5817DD55266021A1000F4B8E /* HomeResponse.swift in Sources */,
+				5801047D270F1B5A00ED4BF6 /* SignInRepository.swift in Sources */,
 				58010477270ED5EA00ED4BF6 /* SignUpViewController.swift in Sources */,
 				58659ACF26880D6D00BCCB7B /* CarouselLayout.swift in Sources */,
 				58A8D43026529DB000F6C58D /* SceneDelegate.swift in Sources */,

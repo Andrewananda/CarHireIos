@@ -14,6 +14,8 @@ class SigninViewController: UIViewController, UITextFieldDelegate {
     
     var shouldNotChangeUserName: Bool = false
     var shouldNotChangePassword: Bool = false
+    
+    var viewModel: SignInViewModel = SignInViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,16 +36,19 @@ class SigninViewController: UIViewController, UITextFieldDelegate {
             if isUsernameValied() {
                 if shouldNotChangePassword {
                     //Submit inputs
-                }else{
-                    //Password cannot be empty
-                    toastView(messsage: K.errorResponse.passwordError, view: self.view)
+                    print("UsernameTxt \(txtUserName.text)")
+                    var username = txtUserName!.text
+                    var password =  txtPassword!.text
+                    viewModel.loginUser(username: username!, password: password!)
                 }
             } else {
                 //Enter valied email or phone number
+                print("!SigningIn Repository.....")
                 toastView(messsage: K.errorResponse.usernameOrPhoneError, view: self.view)
             }
         }else {
             //username cannot be empty
+            print("!SigningIn Repository.....")
             toastView(messsage: K.errorResponse.usernameError, view: self.view)
         }
     }

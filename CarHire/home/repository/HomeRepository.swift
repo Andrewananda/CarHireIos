@@ -15,7 +15,7 @@ class HomeRepository {
     let homeSubject = PublishRelay<HomeResponse>()
     
     func fetchHomeData() {
-        apiService.fetchData(url: "home", method: .get) { [weak self]
+        apiService.fetchData(url: "home", method: .get, params: nil) { [weak self]
             (response : Swift.Result<ApiResponse<HomeResponse>, Errors>) in
             switch response {
             case .success(let data) :
