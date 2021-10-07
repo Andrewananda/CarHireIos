@@ -24,6 +24,10 @@ class SigninViewController: UIViewController, UITextFieldDelegate {
         txtPassword.textColor = .gray
         txtUserName.textColor = .gray
     }
+
+}
+
+extension SigninViewController {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         switch textField {
@@ -70,5 +74,4 @@ class SigninViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-
 }
