@@ -694,6 +694,9 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" title="Sign up"/>
+                                        <connections>
+                                            <action selector="signUp:" destination="NTP-qa-8UA" eventType="touchUpInside" id="4Kd-j0-x8z"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2A-ZP-o9P">
                                         <rect key="frame" x="192" y="0.0" width="182" height="50"/>
@@ -701,6 +704,9 @@
                                         <state key="normal" title="Log in">
                                             <color key="titleColor" red="0.99988508220000005" green="0.99998223779999995" blue="0.99983561040000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signIn:" destination="NTP-qa-8UA" eventType="touchUpInside" id="97O-DI-PVI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -753,18 +759,18 @@
                     <navigationItem key="navigationItem" id="aCf-wa-7hA"/>
                     <connections>
                         <outlet property="btnSignIn" destination="C2A-ZP-o9P" id="zT6-dd-7QT"/>
-                        <segue destination="AZp-5I-UCJ" kind="show" id="H1O-Ug-I1I"/>
-                        <segue destination="bTU-ta-1Gl" kind="show" id="K4T-w3-jR2"/>
+                        <segue destination="AZp-5I-UCJ" kind="show" identifier="signInSegue" id="H1O-Ug-I1I"/>
+                        <segue destination="bTU-ta-1Gl" kind="show" identifier="signUpSegue" id="K4T-w3-jR2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ts-Lq-ON4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2346.376811594203" y="-421.20535714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="hX0-0o-MTA">
             <objects>
-                <viewController id="bTU-ta-1Gl" sceneMemberID="viewController">
+                <viewController id="bTU-ta-1Gl" customClass="SignUpViewController" customModule="CarHire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4UY-07-JN6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -777,10 +783,10 @@
             </objects>
             <point key="canvasLocation" x="-1205" y="-663"/>
         </scene>
-        <!--View Controller-->
+        <!--Signin View Controller-->
         <scene sceneID="ZfN-Da-I1o">
             <objects>
-                <viewController id="AZp-5I-UCJ" sceneMemberID="viewController">
+                <viewController id="AZp-5I-UCJ" customClass="SigninViewController" customModule="CarHire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JLY-R6-RdM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

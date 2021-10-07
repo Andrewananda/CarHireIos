@@ -18,5 +18,7 @@ struct K {
         static let topDealsCell = "topDealsRusableCell"
         static let carDetailSegue = "CarDetailView"
         static let enquirySegue = "enquirySegue"
+        static let signUpSegue = "signUpSegue"
+        static let signInSegue = "signInSegue"
     }
 }

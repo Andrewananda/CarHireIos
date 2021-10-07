@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5801046D270ECBC600ED4BF6 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5801046C270ECBC600ED4BF6 /* IntroViewController.swift */; };
+		58010473270ED5AD00ED4BF6 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58010472270ED5AD00ED4BF6 /* SigninViewController.swift */; };
+		58010477270ED5EA00ED4BF6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58010476270ED5EA00ED4BF6 /* SignUpViewController.swift */; };
 		5817DD5326602088000F4B8E /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5817DD5226602088000F4B8E /* HomeRepository.swift */; };
 		5817DD55266021A1000F4B8E /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5817DD54266021A1000F4B8E /* HomeResponse.swift */; };
 		5817DD57266024A2000F4B8E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5817DD56266024A2000F4B8E /* HomeViewModel.swift */; };
@@ -59,6 +61,8 @@
 		4D1494D71E8F5A9F3EE25C49 /* Pods-CarHire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarHire.debug.xcconfig"; path = "Target Support Files/Pods-CarHire/Pods-CarHire.debug.xcconfig"; sourceTree = "<group>"; };
 		573699CE684703ED48A82131 /* Pods_CarHireTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarHireTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5801046C270ECBC600ED4BF6 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		58010472270ED5AD00ED4BF6 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		58010476270ED5EA00ED4BF6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5817DD5226602088000F4B8E /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		5817DD54266021A1000F4B8E /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
 		5817DD56266024A2000F4B8E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -137,6 +141,47 @@
 				5801046C270ECBC600ED4BF6 /* IntroViewController.swift */,
 			);
 			path = intro;
+			sourceTree = "<group>";
+		};
+		5801046E270ED57A00ED4BF6 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				58010470270ED58900ED4BF6 /* signUp */,
+				5801046F270ED58100ED4BF6 /* signIn */,
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
+		5801046F270ED58100ED4BF6 /* signIn */ = {
+			isa = PBXGroup;
+			children = (
+				58010471270ED59900ED4BF6 /* view */,
+			);
+			path = signIn;
+			sourceTree = "<group>";
+		};
+		58010470270ED58900ED4BF6 /* signUp */ = {
+			isa = PBXGroup;
+			children = (
+				58010474270ED5CE00ED4BF6 /* view */,
+			);
+			path = signUp;
+			sourceTree = "<group>";
+		};
+		58010471270ED59900ED4BF6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				58010472270ED5AD00ED4BF6 /* SigninViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		58010474270ED5CE00ED4BF6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				58010476270ED5EA00ED4BF6 /* SignUpViewController.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		5817DD5126602076000F4B8E /* repository */ = {
@@ -274,6 +319,7 @@
 		58A8D42C26529DAF00F6C58D /* CarHire */ = {
 			isa = PBXGroup;
 			children = (
+				5801046E270ED57A00ED4BF6 /* auth */,
 				5801046B270ECBA800ED4BF6 /* intro */,
 				58F09996268BA76600A5219F /* enquiry */,
 				58913FDB2655A5C800AB4D23 /* utils */,
@@ -581,9 +627,11 @@
 				58A8D42E26529DB000F6C58D /* AppDelegate.swift in Sources */,
 				58F09999268BA78300A5219F /* EnquiryViewController.swift in Sources */,
 				5801046D270ECBC600ED4BF6 /* IntroViewController.swift in Sources */,
+				58010473270ED5AD00ED4BF6 /* SigninViewController.swift in Sources */,
 				58913FD82655A23C00AB4D23 /* NetworkService.swift in Sources */,
 				58913FDA2655A35600AB4D23 /* ApiResponse.swift in Sources */,
 				5817DD55266021A1000F4B8E /* HomeResponse.swift in Sources */,
+				58010477270ED5EA00ED4BF6 /* SignUpViewController.swift in Sources */,
 				58659ACF26880D6D00BCCB7B /* CarouselLayout.swift in Sources */,
 				58A8D43026529DB000F6C58D /* SceneDelegate.swift in Sources */,
 				58659ACD26880D6000BCCB7B /* Carousel.swift in Sources */,
