@@ -23,6 +23,10 @@ class IntroViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
     }
+    
+    override func viewDidLayoutSubviews() {
+        self.navigationController?.isNavigationBarHidden = true
+    }
 
     @IBAction func signUp(_ sender: Any) {
         performSegue(withIdentifier: K.viewConstants.signUpSegue, sender: self)

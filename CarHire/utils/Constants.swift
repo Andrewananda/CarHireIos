@@ -20,5 +20,12 @@ struct K {
         static let enquirySegue = "enquirySegue"
         static let signUpSegue = "signUpSegue"
         static let signInSegue = "signInSegue"
+        
+    }
+    
+    struct errorResponse {
+        static let usernameError = "Username field cannot be empty"
+        static let usernameOrPhoneError = "Enter a valid email or phone number"
+        static let passwordError = "Password field cannot be empty"
     }
 }

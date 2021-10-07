@@ -25,6 +25,40 @@ class SigninViewController: UIViewController, UITextFieldDelegate {
         txtUserName.textColor = .gray
     }
 
+    @IBAction func btnSubmit(_ sender: Any) {
+        validateInputs()
+    }
+    
+    private func validateInputs() {
+        if shouldNotChangeUserName {
+            if isUsernameValied() {
+                if shouldNotChangePassword {
+                    //Submit inputs
+                }else{
+                    //Password cannot be empty
+                    toastView(messsage: K.errorResponse.passwordError, view: self.view)
+                }
+            } else {
+                //Enter valied email or phone number
+                toastView(messsage: K.errorResponse.usernameOrPhoneError, view: self.view)
+            }
+        }else {
+            //username cannot be empty
+            toastView(messsage: K.errorResponse.usernameError, view: self.view)
+        }
+    }
+    
+    private func isUsernameValied() -> Bool{
+        if let username = txtUserName.text {
+            if username.isValidEmail() {
+              return true
+            }
+            if username.isNumber {
+                return true
+            }
+        }
+        return false
+    }
 }
 
 extension SigninViewController {
